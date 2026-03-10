@@ -1,0 +1,16 @@
+.boton {
+  padding: 10px 22px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.boton--primario { background: var(--color-primary); color: #fff; }
+.boton--primario:hover:not(:disabled) { background: var(--color-primary-dark); }
+.boton--secundario { background: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
+.boton--secundario:hover:not(:disabled) { background: var(--color-primary); color: #fff; }
+.boton--peligro { background: var(--color-error); color: #fff; }
+.boton--peligro:hover:not(:disabled) { opacity: 0.85; }
+.boton:disabled { opacity: 0.5; cursor: not-allowed; }

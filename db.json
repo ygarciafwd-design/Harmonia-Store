@@ -1,0 +1,74 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Administrador",
+      "email": "admin@harmonia.com",
+      "password": "admin123",
+      "rol": "admin"
+    },
+    {
+      "nombre": "Samir",
+      "email": "ygarciafwd@gmail.com",
+      "password": "111222",
+      "rol": "cliente",
+      "id": "05qli0R"
+    }
+  ],
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Guitarra Acústica Yamaha F310",
+      "precio": 250,
+      "categoria": "Cuerdas",
+      "stock": 10,
+      "imagen": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=400&fit=crop",
+      "descripcion": "Guitarra acústica ideal para principiantes."
+    },
+    {
+      "id": "2",
+      "nombre": "Piano Digital Casio CDP-S100",
+      "precio": 450,
+      "categoria": "Teclados",
+      "stock": 5,
+      "imagen": "https://images.unsplash.com/photo-1552422535-c45813c61732?w=400&h=400&fit=crop",
+      "descripcion": "Piano digital compacto con 88 teclas."
+    },
+    {
+      "id": "3",
+      "nombre": "Batería Pearl Roadshow",
+      "precio": 700,
+      "categoria": "Percusión",
+      "stock": 3,
+      "imagen": "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=400&h=400&fit=crop",
+      "descripcion": "Set de batería completo para principiantes."
+    },
+    {
+      "id": "4",
+      "nombre": "Violín Stentor Student I",
+      "precio": 180,
+      "categoria": "Cuerdas",
+      "stock": 8,
+      "imagen": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=400&h=400&fit=crop",
+      "descripcion": "Violín para estudiantes de nivel inicial."
+    },
+    {
+      "id": "5",
+      "nombre": "Trompeta Yamaha YTR-2330",
+      "precio": 320,
+      "categoria": "Vientos",
+      "stock": 6,
+      "imagen": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop",
+      "descripcion": "Trompeta Bb estándar para estudiantes."
+    },
+    {
+      "id": "6",
+      "nombre": "Saxofón Alto Mendini",
+      "precio": 390,
+      "categoria": "Vientos",
+      "stock": 4,
+      "imagen": "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=400&h=400&fit=crop",
+      "descripcion": "Saxofón alto con estuche incluido."
+    }
+  ]
+}

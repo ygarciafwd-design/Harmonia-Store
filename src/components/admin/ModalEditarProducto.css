@@ -1,0 +1,62 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: var(--color-surface);
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
+}
+
+.modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+}
+
+.modal__titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--color-primary);
+  position: sticky;
+  top: -32px;
+  background: var(--color-surface);
+  padding: 32px 32px 10px 32px;
+  margin: -32px -32px 20px -32px;
+  border-bottom: 1px solid var(--color-border);
+  z-index: 10;
+}
+
+.modal__acciones {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+  position: sticky;
+  bottom: -32px;
+  background: var(--color-surface);
+  padding: 10px 32px 32px 32px;
+  margin: 20px -32px -32px -32px;
+  border-top: 1px solid var(--color-border);
+  z-index: 10;
+}

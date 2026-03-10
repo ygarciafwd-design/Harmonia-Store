@@ -1,0 +1,9 @@
+.dashboard { min-height: 100vh; background: var(--color-bg); }
+.dashboard__contenido { padding: 32px; max-width: 1200px; margin: 0 auto; }
+.dashboard__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; flex-wrap: wrap; gap: 16px; }
+.dashboard__titulo { font-size: 1.8rem; font-weight: 800; color: var(--color-primary); }
+.dashboard__stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.stat-card { background: var(--color-surface); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); text-align: center; }
+.stat-card__numero { font-size: 2.5rem; font-weight: 800; color: var(--color-primary); }
+.stat-card__label { color: var(--color-text-muted); font-size: 0.9rem; margin-top: 4px; }
+.dashboard__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }

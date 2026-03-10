@@ -1,0 +1,13 @@
+.campo { display: flex; flex-direction: column; gap: 5px; margin-bottom: 16px; }
+.campo__label { font-size: 0.9rem; font-weight: 600; color: var(--color-text); }
+.campo__input {
+  padding: 10px 14px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  transition: var(--transition);
+  background: var(--color-surface);
+}
+.campo__input:focus { outline: none; border-color: var(--color-primary); }
+.campo__input--error { border-color: var(--color-error); }
+.campo__error { font-size: 0.8rem; color: var(--color-error); }
