@@ -17,38 +17,13 @@ export const validarNombre = (nombre: string): string | null => {
   return null;
 };
 
-/** Campos del formulario de inicio de sesión. */
-export type LoginCampos = {
-  email: string;
-  password: string;
-};
+// Tipos solo internos para las firmas; los tipos de formulario se definen en cada componente.
+type LoginInput = { email: string; password: string };
+type RegistroInput = { nombre: string; email: string; password: string; confirmarPassword: string };
+type ProductoInput = { nombre: string; precio: string | number; categoria: string; stock: string | number; descripcion: string };
 
-/** Campos del formulario de registro de usuario. */
-export type RegistroCampos = {
-  nombre: string;
-  email: string;
-  password: string;
-  confirmarPassword: string;
-};
-
-/** Campos del formulario de producto (alta/edición). precio y stock aceptan string (input) o number. */
-export type ProductoCampos = {
-  nombre: string;
-  precio: string | number;
-  categoria: string;
-  stock: string | number;
-  descripcion: string;
-};
-
-/** Errores de validación del login: cada clave opcional con mensaje en string. */
-export type ErroresLogin = Partial<Record<keyof LoginCampos, string>>;
-/** Errores de validación del registro: cada clave opcional con mensaje en string. */
-export type ErroresRegistro = Partial<Record<keyof RegistroCampos, string>>;
-/** Errores de validación del producto: cada clave opcional con mensaje en string. */
-export type ErroresProducto = Partial<Record<keyof ProductoCampos, string>>;
-
-export const validarFormularioLogin = ({ email, password }: LoginCampos): ErroresLogin => {
-  const errores: ErroresLogin = {};
+export const validarFormularioLogin = ({ email, password }: LoginInput): Partial<Record<keyof LoginInput, string>> => {
+  const errores: Partial<Record<keyof LoginInput, string>> = {};
 
   if (!email) {
     errores.email = 'El email es requerido';
@@ -69,8 +44,8 @@ export const validarFormularioRegistro = ({
   email,
   password,
   confirmarPassword,
-}: RegistroCampos): ErroresRegistro => {
-  const errores: ErroresRegistro = {};
+}: RegistroInput): Partial<Record<keyof RegistroInput, string>> => {
+  const errores: Partial<Record<keyof RegistroInput, string>> = {};
 
   const errNombre = validarNombre(nombre);
   if (errNombre) {
@@ -101,8 +76,8 @@ export const validarProducto = ({
   categoria,
   stock,
   descripcion,
-}: ProductoCampos): ErroresProducto => {
-  const errores: ErroresProducto = {};
+}: ProductoInput): Partial<Record<keyof ProductoInput, string>> => {
+  const errores: Partial<Record<keyof ProductoInput, string>> = {};
 
   if (!nombre || nombre.trim().length < 2) {
     errores.nombre = 'El nombre debe tener al menos 2 caracteres';

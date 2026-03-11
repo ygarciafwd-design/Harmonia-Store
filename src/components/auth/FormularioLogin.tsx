@@ -11,9 +11,12 @@ type LoginCampos = {
   email: string;
   password: string;
 };
+
+type LoginErrores = Partial<LoginCampos>;
+
 const FormularioLogin = () => {
   const [campos, setCampos] = useState<LoginCampos>({ email: '', password: '' });
-  const [errores, setErrores] = useState<Partial<LoginCampos>>({});
+  const [errores, setErrores] = useState<LoginErrores>({});
   const [cargando, setCargando] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
