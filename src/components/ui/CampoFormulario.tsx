@@ -1,6 +1,24 @@
 import './CampoFormulario.css';
 
-const CampoFormulario = ({ label, tipo = 'text', nombre, valor, onChange, error, placeholder }) => (
+interface CampoFormularioProps {
+  label?: string;
+  tipo?: string;
+  nombre: string;
+  valor: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  error?: string;
+  placeholder?: string;
+}
+
+const CampoFormulario = ({ 
+  label, 
+  tipo = 'text', 
+  nombre, 
+  valor, 
+  onChange, 
+  error, 
+  placeholder 
+}: CampoFormularioProps) => (
   <div className="campo">
     {label && <label className="campo__label">{label}</label>}
     <input
